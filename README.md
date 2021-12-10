@@ -20,15 +20,15 @@ Từ rất lâu rồi, mình cũng muốn viết vài bài chia sẻ các kiến
 - Mất khá nhiều thời gian để `sync data` giữa các trang blog khác nhau.
 - Mình không phải là 1 người dành quá nhiều thời gian để tương tác, hoạt động trên blog, vì vậy các `issues/comments/blames....` sẽ ngủ đông khá lâu. :grinning:
 
-Và đây là lý do vì sao mình dùng `github` để viết blog, cũng như present:
+Và đây là lý do vì sao mình dùng [Github](https://github.com/) để viết blog, cũng như present:
 - Dễ dàng: 
 
     - `Sync data`: 1 tài khoản cho tất cả các hệ điều hành, nằm trên Cloud
-    - `Assign other teammate`: đối với những phần cần hợp tác, nhờ sự trợ giúp
-    - `Presentation`: mình thích xài kết hợp cùng powerpoint, google docs
-    - `Storage OKRS, Xmind`: là 1 nơi mình lưu trữ các file OKRS, cũng như Xmind
+    - `Assign other teammate`: đối với những phần cần hợp tác, nhờ sự trợ giúp, [Cùng chia sẻ với mình nhé](https://github.com/toannmdev/EasyLearning/issues/new) :grinning:
+    - `Presentation`: mình thích xài kết hợp cùng [Powerpoint](https://www.office.com/launch/powerpoint), [Google docs](https://docs.google.com/)
+    - `Storage OKRS, Xmind`: là 1 nơi mình lưu trữ các file [OKRS](https://vi.wikipedia.org/wiki/OKR), cũng như [Xmind](https://www.xmind.net/)
     
-- Mục tiêu của mình là nâng cao chất lượng, hiệu quả công việc, vì vậy nên những công cụ như `chart`, `board` là thực sự cần thiết
+- Mục tiêu của mình là nâng cao chất lượng, hiệu quả công việc, vì vậy nên những công cụ như `chart`, `board` là thực sự cần thiết. Mình hay track theo [2021](https://github.com/toannmdev?tab=overview&from=2021-01-01&to=2021-12-10) để thấy 1 năm vừa qua mình đã học thêm được những gì
 
 <!-- [**Main topic**](README.md) -->
 
