@@ -16,7 +16,7 @@
 Từ rất lâu rồi, mình cũng muốn viết vài bài chia sẻ các kiến thức mình tích lũy được vào những lúc có thời gian rảnh, nhưng mình thực sự không thích viết Blog lắm.
 Đây là 1 vài lý do:
 
-- Mình viết blog để chia sẻ, và để củng cổ, note lại các kiến thức đã tích lũy được, chứ không phải với mục đích khoe khoang với thiên hạ rằng tôi thế này, tôi thế kia....
+- Mình viết blog để chia sẻ, và để củng cố, note lại các kiến thức đã tích lũy được, chứ không phải với mục đích khoe khoang với thiên hạ rằng tôi thế này, tôi thế kia....
 - Mất khá nhiều thời gian để `sync data` giữa các trang blog khác nhau.
 - Mình không phải là 1 người dành quá nhiều thời gian để tương tác, hoạt động trên blog, vì vậy các `issues/comments/blames....` sẽ ngủ đông khá lâu. :grinning:
 
