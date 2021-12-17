@@ -2,9 +2,19 @@
 
 - Context đứng ở vị trí review lại sản phẩm của Team, review sản phẩm team mình làm ra 1 cách công bằng, nhìn nhận những mặt tốt, dở của cả Team để anh em cùng tiến bộ ở các dự án tới.
 
-- Thời gian từ khi đưa ra ý tưởng -> nghiệm thu kết quả: *27/09* -> *22/04*
+- Thời gian từ khi đưa ra ý tưởng -> nghiệm thu kết quả: *27/09/2020* -> *22/04/2021*
 
 - Tổng thời gian dự án: chạy hơn *6 tháng*, thời gian thực tế anh em dành cho dự án: *~~1-2h/1 ngày* (man hours còn lại anh em còn bận maintaince, take care các dự án khác)
+
+## Tổng quát
+
+- Đối với những bài toán liên quan tới thay đổi thói quen người dùng cần:
+
+    - Có kịch bản rõ ràng, tính tới các trường hợp truyền thông sau này, tránh hậu quả phải đem con bỏ chợ
+    - Những điều mình làm, có thực sự mang lại giá trị cho khách hàng? Khách hàng ở đây là `end-user`, thay vì `customer`
+- 2 case study cụ thể: 
+    - **[Easy2Pay](https://easy2pay.vn/)**
+    - **[VietQr](https://vietqr.net/)**
 
 ## Bối cảnh:
 
@@ -35,7 +45,9 @@
     - Thanh toán qua Smart Banking.
 
 - Phương thức hoạt động:
-    - [SoftDreams](https://easyinvoice.vn/) cung cấp cho người dùng 1 mã tài khoản định danh. Để thanh toán các đơn hàng, thực hiện các giao dịch….khách hàng tiến hành nhập mã định danh (gần giống số tài khoản tại ngân hàng), chọn ngân hàng BIDV, số tiền của giao dịch/đơn hàng sẽ được tự động điền (optional).
+    - [SoftDreams](https://easyinvoice.vn/) cung cấp cho người dùng 1 mã tài khoản định danh. 
+    - Để thanh toán các đơn hàng, thực hiện các giao dịch....khách hàng tiến hành nhập mã định danh (gần giống số tài khoản tại ngân hàng), chọn ngân hàng, số tiền của giao dịch/đơn hàng sẽ được tự động điền (optional).
+    - Các thao tác sẽ y như thao tác chuyển tiền thông thường
 
 ## Đối tượng người dùng SoftDreams muốn hướng tới:
 
@@ -49,6 +61,10 @@
 - Các đơn hàng được **`đối soát tự động`**: đã thanh toán đủ số tiền, thanh toán 1 phần, hay toàn bộ đơn hàng….trước khi chuyển cho bộ phận Kế toán giúp giảm được nhiều thời gian giữa các khâu đối soát đơn hàng….
 - Nhận được thông báo **`realtime`** khi tiền được chuyển vào tài khoản.
 
+## Hạn chế:
+- 1 `Mã tài khoản định danh` ứng với 1 giao dịch, có thể gồm 1, hoặc nhiều hóa đơn (đơn hàng). Vì vậy, khách hàng không thể `Lưu danh bạ` cho các lần thanh tiếp tiếp theo (khó quản lý `mã tài khoản định danh`)
+
+=> **Đây là rào cản lớn nhất [Easy2Pay](https://easy2pay.vn/) gặp phải**
 ## Kết quả:
 
 - Sau khi đưa ra ý tưởng, mọi người đều đánh giá khả thi, và có khả năng phát triển tốt, mang lại nhiều lợi ích cho khách hàng.
