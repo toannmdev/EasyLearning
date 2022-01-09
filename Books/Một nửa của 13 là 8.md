@@ -33,7 +33,9 @@ Mười và ba. Họ đã bắt đầu hứng thú với trò chơi.
     
     Chính xác. Còn gì nữa là một nửa của mười ba?
     
-Một sinh tiến về phía bảng đen và viết chữ MƯỜI BA, sau đó xóa đi nửa dưới, chỉ vào phần còn lại và nói một cách đắc thắng: “Đây là một nửa của mười ba.”
+Một sinh tiến về phía bảng đen và viết chữ MƯỜI BA, sau đó xóa đi nửa dưới, chỉ vào phần còn lại và nói một cách đắc thắng:
+
+“Đây là một nửa của mười ba.”
     
     Chính xác. Còn gì nữa là một nửa của mười ba?
 
@@ -61,7 +63,9 @@ Mười một và hai. Nửa trái và nửa phải của XIII La Mã.
 
     Chính xác. Còn gì nữa là một nửa của mười ba?
     
-1-1 và 0-1. Trong hệ nhị nguyên, 13 được viết dưới dạng 1-1-0-1. Do vậy mà một nửa là 1-1 và 0-1. Ngoài ra còn có 11 và 1 nữa.
+1-1 và 0-1. Trong hệ nhị nguyên, 13 được viết dưới dạng 1-1-0-1. 
+
+Do vậy mà một nửa là 1-1 và 0-1. Ngoài ra còn có 11 và 1 nữa.
 
     Chính xác. Còn gì nữa là một nửa của mười ba?
     
@@ -82,6 +86,7 @@ Một người khác lên bảng viết ||||||||||||| rồi xóa đi nửa trên
     Chính xác. Còn gì nữa là một nửa của mười ba?
 
 Ba. Mười ba là chữ có sáu ký tự treize trong tiếng Pháp.
+
     Lại thêm một bước đột phá. Giờ họ đưa cả ngoại ngữ vào. Ngoài ra còn có tre và ize vì đây là hai nửa của treize. Còn nữa, nửa trên của... Thôi vậy là được rồi! Tôi ngắt lời. 
     
     Các bạn có nhớ lúc ta mới bắt đầu như thế nào không? 
