@@ -12,7 +12,9 @@ Có người hơi rụt rè: Sáu phẩy năm? Chính xác. Còn gì nữa?
     
     Và tất cả bọn họ đều trơ mắt nhìn tôi như những con bò nhìn xe qua đường.
     
-    Thôi được, lúc đó tôi nói: “Tôi muốn các bạn ghi nhớ suy nghĩ và cảm giác của mình ngay lúc này, rằng ông thầy này chắc bị điên, rằng chẳng có đáp án nào khác, rằng một nửa của mười ba là sáu rưỡi hoặc sáu phẩy năm mà thôi.” 
+    Thôi được, lúc đó tôi nói: 
+    
+    “Tôi muốn các bạn ghi nhớ suy nghĩ và cảm giác của mình ngay lúc này, rằng ông thầy này chắc bị điên, rằng chẳng có đáp án nào khác, rằng một nửa của mười ba là sáu rưỡi hoặc sáu phẩy năm mà thôi.” 
     
     Còn bây giờ, hãy động não, Còn gì nữa là một nửa của mười ba?
     
@@ -79,7 +81,9 @@ Một người khác lên bảng viết ||||||||||||| rồi xóa đi nửa trên
 Ba. Mười ba là chữ có sáu ký tự treize trong tiếng Pháp.
     Lại thêm một bước đột phá. Giờ họ đưa cả ngoại ngữ vào. Ngoài ra còn có tre và ize vì đây là hai nửa của treize. Còn nữa, nửa trên của... Thôi vậy là được rồi! Tôi ngắt lời. 
     
-    Các bạn có nhớ lúc ta mới bắt đầu như thế nào không? Làm thế nào mà các bạn nghĩ chỉ có thể có một đáp án đó? Giờ thì các bạn hiểu rồi đấy: Lúc nào cũng có một đáp án khác. 
+    Các bạn có nhớ lúc ta mới bắt đầu như thế nào không? 
+    
+    Làm thế nào mà các bạn nghĩ chỉ có thể có một đáp án đó? Giờ thì các bạn hiểu rồi đấy: Lúc nào cũng có một đáp án khác. 
     
     Bạn chỉ phải tìm ra nó mà thôi!
 

@@ -27,7 +27,7 @@
 
 *Gợi ý chút: nhìn nhận câu hỏi theo nhiều hướng khác nhau sẽ đưa ra nhiều kết quả khác nhau đấy* :laughing:
 
-[Đây]() là kết quả của câu hỏi trên `"Một nửa của Mười ba là gì"`
+[Đây](https://github.com/toannmdev/EasyLearning/blob/main/Books/M%E1%BB%99t%20n%E1%BB%ADa%20c%E1%BB%A7a%2013%20l%C3%A0%208.md) là kết quả của câu hỏi trên `"Một nửa của Mười ba là gì"`
 
 --
 
