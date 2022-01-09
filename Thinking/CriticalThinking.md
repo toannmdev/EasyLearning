@@ -18,7 +18,9 @@
 
 ## 1. **Các câu chuyện về tư duy phản biện**
 
-    1 ngày đẹp trời, khi mình đang đi mua hàng ở VinMart thì vô tình nghe được câu hỏi của 1 cậu bé với ông bố: "Uống sữa đậu nành vinamilk óc chó này có giúp con thông minh hơn không bố?"
+    1 ngày đẹp trời, khi mình đang đi mua hàng ở VinMart thì vô tình nghe được câu hỏi của 1 cậu bé với ông bố: 
+    
+    "Uống sữa đậu nành vinamilk óc chó này có giúp con thông minh hơn không bố?"
 
 
 *Đọc xong câu chuyện này, bạn có suy nghĩ gì?* Thử suy nghĩ rồi tiếp tục đọc tiếp câu chuyện thứ 2 nhé, cái này cần suy nghĩ nhiều hơn đấy :kissing:
