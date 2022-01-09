@@ -14,7 +14,10 @@ Có người hơi rụt rè: Sáu phẩy năm? Chính xác. Còn gì nữa?
     
     Thôi được, lúc đó tôi nói: 
     
-    “Tôi muốn các bạn ghi nhớ suy nghĩ và cảm giác của mình ngay lúc này, rằng ông thầy này chắc bị điên, rằng chẳng có đáp án nào khác, rằng một nửa của mười ba là sáu rưỡi hoặc sáu phẩy năm mà thôi.” 
+    “Tôi muốn các bạn ghi nhớ suy nghĩ và cảm giác của mình ngay lúc này,
+    Rằng ông thầy này chắc bị điên, 
+    Rằng chẳng có đáp án nào khác, 
+    Rằng một nửa của mười ba là sáu rưỡi hoặc sáu phẩy năm mà thôi.” 
     
     Còn bây giờ, hãy động não, Còn gì nữa là một nửa của mười ba?
     
