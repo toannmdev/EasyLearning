@@ -87,11 +87,16 @@ Một người khác lên bảng viết ||||||||||||| rồi xóa đi nửa trên
 
 Ba. Mười ba là chữ có sáu ký tự treize trong tiếng Pháp.
 
-    Lại thêm một bước đột phá. Giờ họ đưa cả ngoại ngữ vào. Ngoài ra còn có tre và ize vì đây là hai nửa của treize. Còn nữa, nửa trên của... Thôi vậy là được rồi! Tôi ngắt lời. 
+    Lại thêm một bước đột phá. 
+    
+    Giờ họ đưa cả ngoại ngữ vào. 
+    Ngoài ra còn có tre và ize vì đây là hai nửa của treize. Còn nữa, nửa trên của... 
+    Thôi vậy là được rồi! Tôi ngắt lời. 
     
     Các bạn có nhớ lúc ta mới bắt đầu như thế nào không? 
     
-    Làm thế nào mà các bạn nghĩ chỉ có thể có một đáp án đó? Giờ thì các bạn hiểu rồi đấy: Lúc nào cũng có một đáp án khác. 
+    Làm thế nào mà các bạn nghĩ chỉ có thể có một đáp án đó?
+    Giờ thì các bạn hiểu rồi đấy: Lúc nào cũng có một đáp án khác.
     
     Bạn chỉ phải tìm ra nó mà thôi!
 
