@@ -37,6 +37,9 @@ void main(List<String> args) {
 }
 ```
 
+\
+&nbsp;
+
 ### int
 int là kiểu số nguyên. Tùy thuộc vào bộ nhớ máy, nền tảng máy (32 bit hay 64 bit) mà kiểu số nguyên trong Dart có giá trị từ -2^63 đến 2^63 - 1. Ngoài kiểu số nguyên int, trong Dart còn có kiểu số nguyên BigInt để làm việc với các số nguyên lớn.
 
@@ -51,6 +54,9 @@ void main(List<String> args) {
   print("b = $b"); // b = -10
 }
 ```
+
+\
+&nbsp;
 
 ### double
 1. Khái niệm:
@@ -109,6 +115,9 @@ void main(List<String> args) {
 }
 ```
 
+\
+&nbsp;
+
 ### bool
 Kiểu dữ liệu bool trong Dart có 2 giá trị là true (đúng) và false (sai) được sử dụng để thể hiện kết quả của một mệnh đề logic (các phép toán so sánh, kiểm tra, các hàm…)
 
@@ -138,6 +147,9 @@ void main(List<String> args) {
   }
 }
 ```
+
+\
+&nbsp;
 
 ### array
 1. Khái niệm:
@@ -203,6 +215,9 @@ Dart cũng giống các ngôn ngữ lập trình khác như java, kotlin...đề
 - remove()
 - subList()
 
+\
+&nbsp;
+
 ### map
 1. Khái niệm
 
@@ -257,6 +272,8 @@ void main(List<String> args) {
 - Map lưu trữ dữ liệu theo key-value
 - Key trong map không thể trùng. Nếu thêm 1 map khác có cùng key, value sẽ được cập nhật lại.
 
+\
+&nbsp;
 
 ## dynamic vs var
 1. Khái niệm
@@ -339,4 +356,8 @@ void main(List<String> args) {
 2. Tổng kết
 - Nên hạn chế sử dụng dynamic
 - Trong dart cũng hỗ trợ static, final, late, const
+
+\
+&nbsp;
+
 ## Function, enum
