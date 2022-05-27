@@ -88,7 +88,7 @@ void functionTest(Function function){
 /// - Thực thi function [callback] và trả về dữ liệu kiểu int
 /// - Trả về kiểu dữ liệu sau khi thực thi function [functionTestCallBack] dạng String
 String functionTestCallBack(int Function(String) callback){
-  int result = callback.call("");
+  int result = callback.call(""); // "" là default value
 
   return "Kết quả thực thi function: $result";
 }

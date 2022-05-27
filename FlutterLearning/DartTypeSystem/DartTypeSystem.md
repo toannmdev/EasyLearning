@@ -10,7 +10,8 @@
   - [array](#array)
   - [map](#map)
 - [dynamic vs var](#dynamic-vs-var)
-- [Function, enum](#function-enum)
+- [Function](#function)
+- [Enum](#enum)
 - [Lưu ý](#lưu-ý)
 2. [Null safety](#null-safety)
 - [Why Null safety?](#why-null-safety)
@@ -109,6 +110,8 @@ Chuyển từ int qua double:
 void main(List<String> args) {
   int a = 10;
   double _aDouble = a.toDouble();
+
+  print("int a toDouble: $_aDouble"); // int a toDouble: 10.0
 }
 ```
 
@@ -118,7 +121,7 @@ void main(List<String> args) {
   double b = -10.0;
   int _bInt = b.toInt();
 
-  print("int b toDouble: $_bInt"); // int b toDouble: -10
+  print("double b toInt: $_bInt"); // double b toDouble: -10
 }
 ```
 
@@ -180,8 +183,7 @@ Cách khai báo
 ```dart
 void main(List<String> args) {
   List strs = ["a", "b", "c"]; /// cách viết tắt
-  List<String> strs_1 = <String>["a", "b", "c"
-  ]; /// cách viết tắt rõ nghĩa, sử dụng [generic]
+  List<String> strs_1 = <String>["a", "b", "c"]; /// cách viết tắt rõ nghĩa, sử dụng [generic]
 }
 ```
 
@@ -195,8 +197,7 @@ Thêm mới / xoá 1 phần tử vào array
 ```dart
 void main(List<String> args) {
   List strs = ["a", "b", "c"]; /// cách viết tắt
-  List<String> strs_1 = <String>["a", "b","c"
-  ]; /// cách viết tắt rõ nghĩa, sử dụng [generic]
+  List<String> strs_1 = <String>["a", "b","c"]; /// cách viết tắt rõ nghĩa, sử dụng [generic]
 
   strs.add("d");
   print("strs after adding \"d\" -> $strs");
@@ -215,9 +216,7 @@ void main(List<String> args) {
 Thêm 1 array khác:
 ```dart
 void main(List<String> args) {
-  List strs = ["a", "b", "c"]; /// cách viết tắt
-  List<String> strs_1 = <String>["a", "b","c"
-  ]; /// cách viết tắt rõ nghĩa, sử dụng [generic]
+  List<String> strs_1 = <String>["a", "b","c"]; /// cách viết tắt rõ nghĩa, sử dụng [generic]
 
 
   List<String> strs_2 = ["d", "e", "f"];
@@ -230,9 +229,7 @@ void main(List<String> args) {
 Tách các phần tử thành 1 array từ 1 array:
 ```dart
 void main(List<String> args) {
-  List strs = ["a", "b", "c"]; /// cách viết tắt
-  List<String> strs_1 = <String>["a", "b","c"
-  ]; /// cách viết tắt rõ nghĩa, sử dụng [generic]
+  List<String> strs_1 = <String>["a", "b","c"]; /// cách viết tắt rõ nghĩa, sử dụng [generic]
   
   
   List<String> strs_1_subList = strs_1.sublist(2, 4);
@@ -244,15 +241,14 @@ void main(List<String> args) {
 Lấy 1 phần tử từ 1 array:
 ```dart
 void main(List<String> args) {
-  List strs = ["a", "b", "c"]; /// cách viết tắt
   List<String> strs_1 = <String>["a", "b","c"
   ]; /// cách viết tắt rõ nghĩa, sử dụng [generic]
   
 
   /// lấy 1 phần tử tại 1 vị trí index trong array
-  String _strByIndex = strs_1_subList[0];
+  String _strByIndex = strs_1[0];
   print("_strByIndex -> $_strByIndex");
-  // _strByIndex -> c
+  // _strByIndex -> a
 }
 ```
 
@@ -294,24 +290,20 @@ void main(List<String> args) {
 ```
 
 Trong dart cũng có hỗ trợ HashMap như các ngôn ngữ lập trình khác: java, kotlin
+\
+&nbsp;
 
 1 vài phương thức cơ bản:
 
 ```dart
 void main(List<String> args) {
-  /// cách viết ngắn gọn
-  Map map = {"key": "value"};
-  print("map -> $map");
-  // map -> {key: value}
-  
-  // cách viết rõ nghĩa
   Map<String, String> map1 = Map<String, String>();
   map1["key"] = "value";
   print("map1 -> $map1");
   // map1 -> {key: value}
 
   /// 1 vài phương thức cơ bản
-  Map<String, String> map2 = Map.from(map);
+  Map<String, String> map2 = Map.from(map1);
   print("map2 -> $map2");
   // map2 -> {key: value}
 
@@ -417,6 +409,8 @@ void main(List<String> args) {
   print("dynamicA -> $dynamicA, loại dữ liệu (variableType) -> ${dynamicA.runtimeType}");
   // dynamicA -> {key: value}, loại dữ liệu (variableType) -> _InternalLinkedHashMap<String, String>
 
+
+
   /// error khi chạy, vì dynamicA hiện tại là Map, không có phương thức toInt()
   var a = dynamicA.toInt();
   print("a -> $a");
@@ -470,7 +464,7 @@ class A {
 \
 &nbsp;
 
-## Function, enum
+## Function
 1. Khái niệm
 
 Hàm là một khối lệnh thực hiện một tác vụ, khối lệnh này được dùng nhiều lần nên gom chúng tại thành một hàm. Trong Dart mọi thứ đều là đối tượng nên hàm cũng là một đối tượng (kế thừa Function).
@@ -479,6 +473,10 @@ Hàm là một khối lệnh thực hiện một tác vụ, khối lệnh này �
   /// viết và gọi function (hàm)
   /// cách gọi hàm phổ biến
   test("cách gọi hàm phổ biến"); // Đây là hàm test, params test: cách gọi hàm phổ biến
+
+  void test(String test){
+    print("Đây là hàm test, params test: $test");
+  }
 ```
 
 Cách viết khác:
@@ -486,11 +484,15 @@ Cách viết khác:
   /// vì trong dart, mọi thứ đều là đối tượng,
   /// và hàm kế thừa Function, nên có thể viết như này
   test.call("gọi qua method call()"); // Đây là hàm test, params test: gọi qua method call()
+
+  void test(String test){
+    print("Đây là hàm test, params test: $test");
+  }
 ```
 
 Function cũng có thể truyền vào như 1 params:
 ```dart
-  void main(List<String> args) {
+void main(List<String> args) {
   /// hoặc có thể truyền vào như 1 parameter....
   functionTest(() => test("function call function"));
   // Đây là hàm test, params test: function call function
@@ -523,7 +525,7 @@ void functionTest(Function function){
 /// - Thực thi function [callback] và trả về dữ liệu kiểu int
 /// - Trả về kiểu dữ liệu sau khi thực thi function [functionTestCallBack] dạng String
 String functionTestCallBack(int Function(String) callback){
-  int result = callback.call("");
+  int result = callback.call(""); // "" là default value
 
   return "Kết quả thực thi function: $result";
 }
@@ -558,7 +560,8 @@ void functionWithPositionedParam(String a, [String b = "", c = "", d = ""]){
 
 Inline function: function trong function
 ```dart
-/// Inline function (function lồng function trong dart)
+void main(List<String> args) {
+  /// Inline function (function lồng function trong dart)
   /// [_inlineFunction2] được định nghĩa bên trong function [_inlineFunction1]
   /// Lúc này chỉ có thể call function [_inlineFunction2] trong function [_inlineFunction2]
   void _inlineFunction1(){
@@ -573,6 +576,7 @@ Inline function: function trong function
   _inlineFunction1();
   // _inlineFunction1
   // _inlineFunction2
+}
 ```
 
 Mở rộng function từ 1 class
