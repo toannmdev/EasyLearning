@@ -12,7 +12,7 @@
 - [dynamic vs var](#dynamic-vs-var)
 - [Function](#function)
 - [Enum](#enum)
-- [Lưu ý](#lưu-ý)
+- [Tổng kết](#tổng-kết)
 2. [Null safety](#null-safety)
 - [Why Null safety?](#why-null-safety)
 - [Null safety là gì?](#null-safety-là-gì)
@@ -21,6 +21,13 @@
 5. Practise
 
 ## Dart Variables
+
+Các kiểu dữ liệu chính trong dart
+\
+&nbsp;
+![Dart Non-nullable](assets/images/non-nullable-types.png "Dart Non-nullable")
+
+
 ### String
 1. Khái niệm:
 
@@ -33,8 +40,49 @@ Cách khai báo và sử dụng:
 ```dart
 void main(List<String> args) {
   /// Có thể sử dụng nháy đơn '' hoặc nháy kép "" để khai báo 1 string
-  String s = 'Hello worl';
+  String s = 'Hello world';
   String s1 = "Hello world";
+}
+```
+
+> :warning: **1 vài phương thức cần nhớ**: đa phần các phương thức của string trong dart đều giống so với java/kotlin/python....
+
+```dart
+void main(List<String> args) {
+  /// Có thể sử dụng nháy đơn '' hoặc nháy kép "" để khai báo 1 string
+  String s = 'Hello world ';
+  String s1 = "Hello world";
+
+  /// Tách kí tự trong 1 chuỗi
+  List<String> splittedStrs = s.split(" ");
+  print("splittedStrs -> $splittedStrs"); // splittedStrs -> [Hello, world]
+
+  /// kiểm tra 1 string có chứa 1 string khác không
+  bool hasWorldStr = s.contains("world");
+  print("hasWorldStr -> $hasWorldStr"); // hasWorldStr -> true
+
+  /// chuyển đổi tất cả kí tự về kí tự viết hoa, viết thường
+  String sUpperCase = s.toUpperCase();
+  String sLowerCase = s.toLowerCase();
+  print("sUpperCase -> $sUpperCase"); // sUpperCase -> HELLO WORLD
+  print("sLowerCase -> $sLowerCase"); // sLowerCase -> hello world
+  
+  /// lấy vị trí đầu tiên của kí tự 'o'
+  int sIndexOf = s.indexOf("o");
+  print("sIndexOf -> $sIndexOf"); // sIndexOf -> 4
+
+  /// kiểm tra xem string bắt đầu với kí tự 'H'
+  bool sStartWith = s.startsWith("H");
+  print("sStartWith -> $sStartWith"); // sStartWith -> true
+
+  /// thay thế các kí tự trong 1 chuỗi
+  String sReplaced = s.replaceAll("world", "everyone");
+  print("sReplaced -> $sReplaced"); // sReplaced -> Hello everyone
+
+  /// loại bỏ khoảng trắng ở đầu/cuối string
+  String sTrimmed = s.trim();
+  print("s -> \"$s\""); // s -> "Hello world "
+  print("sTrimmed -> $sTrimmed"); // sTrimmed -> Hello world
 }
 ```
 
@@ -546,14 +594,14 @@ void main(List<String> args) {
   );
   // params a=không phải giá trị a, b=không phải giá trị b
 
-  functionWithPositionedParam("a", "b", "c");
+  functionWithPositionalParam("a", "b", "c");
   // params a=a, b=b, b=c, d=
 }
 
 void functionWithOptionalParam({String a = "a", String b = "b"}){
   print("params a=$a, b=$b");
 }
-void functionWithPositionedParam(String a, [String b = "", c = "", d = ""]){
+void functionWithPositionalParam(String a, [String b = "", c = "", d = ""]){
   print("params a=$a, b=$b, b=$c, d=$d");
 }
 ```
@@ -604,11 +652,147 @@ extension stringExt on String{
 - Function với optional params linh hoạt trong hầu hết các trường hợp.
 - Function với positioned params sẽ khó mở rộng trong tương lai.
 Ví dụ 1 function với positioned params, sẽ không khả thi khi cần truyền thêm params khác variable type.
+]
+&nbsp;
 
+### Enum
+Kiểu enum trong Dart còn gọi là kiểu liệt kê (kiểu liệt kê thứ tự enumerated) được sử dụng để liệt kê các giá trị hằng số. Kiểu liệt kê được khai báo bằng cách sử dụng từ khóa enum. Kiểu liệt kê enum cũng là một kiểu iterable, tức là cũng có thể duyệt tuần tự qua từng phần tử của nó.
 
+Ví dụ khai báo enum và thêm function `getName()`
+
+```dart
+enum DayOfWeeks {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
+}
+
+extension DayOfWeeksExt on DayOfWeeks {
+  String getName() {
+    switch (this) {
+      case DayOfWeeks.Monday:
+        return "Thứ 2";
+      case DayOfWeeks.Tuesday:
+        return "Thứ 3";
+      case DayOfWeeks.Wednesday:
+        return "Thứ 4";
+      case DayOfWeeks.Thursday:
+        return "Thứ 5";
+      case DayOfWeeks.Friday:
+        return "Thứ 6";
+      case DayOfWeeks.Saturday:
+        return "Thứ 7";
+      case DayOfWeeks.Sunday:
+        return "Chủ nhật";
+      default:
+        return "Không xác định";
+    }
+  }
+}
+
+void main(List<String> args) {
+  List<DayOfWeeks> dayOfWeeks = DayOfWeeks.values;
+  dayOfWeeks.forEach((element) {
+    print("day is: ${element.getName()}");
+    // day is: Thứ 2
+    // day is: Thứ 3
+    // day is: Thứ 4
+    // day is: Thứ 5
+    // day is: Thứ 6
+    // day is: Thứ 7
+    // day is: Chủ nhật
+  });
+}
+```
+
+\
+&nbsp;
+## Tổng kết
+Hầu hết các biến trong dart giống với các ngôn ngữ lập trình khác như: java, kotlin, python
+
+Các biến trong dart, mặc định đều là non-nullable, tức không thể có giá trị null.
+
+\
+&nbsp;
 
 ## Null safety
 
+Tôi vẫn nhớ những ngày đầu tiên code java, hầu hết lỗi tôi mắc phải là Null Pointer Exception, nhìn nhiều tới quen....1 thời gian sau, khi đi làm ở 1 vài công ty, khi xem các báo cáo về bugs ở công ty, tôi mới phát hiện ra 80% bugs hiện tại các developer mắc phải đều do Null Pointer Exception
+\
+&nbsp;
+
 ### Why Null safety?
 
-### Null safety là gì?
+Xin mượn tạm 1 vài hình ảnh bên phía java
+![Java null pointer exception 1](assets/images/null_pointer_exception_1.png "Java null pointer exception 1")
+
+![Java null pointer exception 2](assets/images/null_pointer_exception_2.png "Java null pointer exception 2")
+
+\
+&nbsp;
+Từ khi chuyển qua Flutter, tôi dùng version 1.12.13, lúc đó tôi chưa thực sự có niềm tin vào Flutter, vì chưa có Null Safety, nhưng từ version 2.0 trở lên, Flutter hiện tại đã khác xưa.
+
+Trong dart chia rõ `Non-Nullable Variables`, tức các biến không thể null, và `Nullable Variables`, tức các biến có thể nhận giá trị null
+
+![Non-Nullable types vs Nullable Type](assets/images/non-nullable-vs-nullable-types.png "Non-Nullable types vs Nullable Type")
+
+Cùng tìm hiểu về Nullable Variables qua ví dụ sau nhé
+```dart
+void main(List<String> args) {
+  /// khi áp dụng `Null safety`, không thể khai báo string s = null
+  /// theo cách thông thường;
+  String s = null; // sẽ báo lỗi, vì String ở đây không thể nhận giá trị null
+  String? sCanBeNull = null;
+  print("sCanBeNull -> $sCanBeNull"); // sẽ in ra sCanBeNull -> null
+}
+```
+
+![String Nullable Hierarchy](assets/images/string-nullable-hierarchy.png "String Nullable Hierarchy")
+
+Như vậy, Flutter đã tách biệt rõ biến nào có thể nhận giá trị Null, biến nào không thể nhận giá trị Null ngay từ khi được khởi tạo.
+
+Cùng xem ví dụ tiếp theo khi áp dụng các hàm nhé:
+
+```dart
+void main(List<String> args) {
+  String? sCanBeNull = null;
+  List<String> splitteds = sCanBeNull.split("");
+  /// với biến có thể null khi thực thi 1 hàm, sẽ báo lỗi để tránh `Null Pointer Exception`
+  /// The method 'split' can't be unconditionally invoked because the receiver can be 'null'.
+  
+  /// Chúng ta buộc phải kiểm tra `sCanBeNull` != null,
+  List<String> splitteds_1 = sCanBeNull?.split("") ?? []; 
+  /// ?? là Null-aware, sẽ giải thích ở phía dưới
+
+  /// Hoặc có 1 cách nữa là chắc chắn rằng giá trị hiện tại của `sCanBeNull` không phải null
+  List<String> splitteds_2 = sCanBeNull!.split(""); 
+}
+```
+
+Qua 2 ví dụ trên, tôi tin mọi người đã thấy được lợi ích mà Null Safety mang lại
+
+\
+&nbsp;
+
+### Null-aware
+
+Được thể hiện bằng dấu '??'. Hiểu nôm na là nếu biểu thức bên trái dấu '??' bị null, thì sẽ lấy giá trị ở bên phải dấu '??'
+
+```dart
+void main(List<String> args) {
+  String? sCanBeNull = null;
+  List<String> splitteds_3 = sCanBeNull?.split("") ?? []; 
+  /// ở đây, sẽ thực thi như sau:
+  /// Nếu `sCanBeNull` != null sẽ gọi hàm split("") và trả về giá trị
+  /// Nếu `sCanBeNull` == null sẽ trả về giá trị []
+  
+  /// 1 vài ví dụ về `Null-aware`
+  sCanBeNull ??= "Value"; // nếu sCanBeNull = null, sCanBeNull = "Value"
+  sCanBeNull ??= "Test"; // sCanBeNull sẽ không được cập nhật, vì giá trị hiện tại = "Value"
+  print("sCanBeNull -> $sCanBeNull");
+}
+```

@@ -55,7 +55,7 @@ void main(List<String> args) {
   // dynamicA -> {key: value}, loại dữ liệu (variableType) -> _InternalLinkedHashMap<String, String>
 
   /// error khi chạy, vì dynamicA hiện tại là Map, không có phương thức toInt()
-  var a = dynamicA.toInt();
+  var a = dynamicA?.toInt();
   print("a -> $a");
   // Class '_InternalLinkedHashMap<String, String>' has no instance method 'toInt'
 
@@ -67,26 +67,26 @@ void main(List<String> args) {
   */
 }
 
-class A {
-  static bool d = false;
+// class A {
+//   static bool d = false;
 
-  void test(){
-    const a = 10;
-    final b = "b";
-    late String c;
+//   void test(){
+//     const a = 10;
+//     final b = "b";
+//     late String c;
 
-    a = 20; // vì a là const, nên không thể thay đổi giá trị
+//     a = 20; // vì a là const, nên không thể thay đổi giá trị
 
-    void initB(){
-      b = 10; // vì b là final, nên không thể thay đổi giá trị
-    }
+//     void initB(){
+//       b = 10; // vì b là final, nên không thể thay đổi giá trị
+//     }
 
-    initB();
+//     initB();
 
-    void initC(){
-      c = "c";
-    }
+//     void initC(){
+//       c = "c";
+//     }
 
-    initC();
-  }
-}
+//     initC();
+//   }
+// }
