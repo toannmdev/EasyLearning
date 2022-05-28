@@ -12,7 +12,7 @@
 - [dynamic vs var](#dynamic-vs-var)
 - [Function](#function)
 - [Enum](#enum)
-- [Tổng kết](#tổng-kết)
+- [Tổng kết Dart Variables](#tổng-kết-dart-variables)
 2. [Null safety](#null-safety)
 - [Why Null safety?](#why-null-safety)
 - [Null safety là gì?](#null-safety-là-gì)
@@ -711,7 +711,7 @@ void main(List<String> args) {
 
 \
 &nbsp;
-## Tổng kết
+## Tổng kết Dart Variables
 Hầu hết các biến trong dart giống với các ngôn ngữ lập trình khác như: java, kotlin, python
 
 Các biến trong dart, mặc định đều là non-nullable, tức không thể có giá trị null.
@@ -728,8 +728,12 @@ Tôi vẫn nhớ những ngày đầu tiên code java, hầu hết lỗi tôi m�
 ### Why Null safety?
 
 Xin mượn tạm 1 vài hình ảnh bên phía java
+\
+&nbsp;
 ![Java null pointer exception 1](assets/images/null_pointer_exception_1.png "Java null pointer exception 1")
 
+\
+&nbsp;
 ![Java null pointer exception 2](assets/images/null_pointer_exception_2.png "Java null pointer exception 2")
 
 \
@@ -737,9 +741,12 @@ Xin mượn tạm 1 vài hình ảnh bên phía java
 Từ khi chuyển qua Flutter, tôi dùng version 1.12.13, lúc đó tôi chưa thực sự có niềm tin vào Flutter, vì chưa có Null Safety, nhưng từ version 2.0 trở lên, Flutter hiện tại đã khác xưa.
 
 Trong dart chia rõ `Non-Nullable Variables`, tức các biến không thể null, và `Nullable Variables`, tức các biến có thể nhận giá trị null
-
+\
+&nbsp;
 ![Non-Nullable types vs Nullable Type](assets/images/non-nullable-vs-nullable-types.png "Non-Nullable types vs Nullable Type")
 
+\
+&nbsp;
 Cùng tìm hiểu về Nullable Variables qua ví dụ sau nhé
 ```dart
 void main(List<String> args) {
@@ -751,6 +758,8 @@ void main(List<String> args) {
 }
 ```
 
+\
+&nbsp;
 ![String Nullable Hierarchy](assets/images/string-nullable-hierarchy.png "String Nullable Hierarchy")
 
 Như vậy, Flutter đã tách biệt rõ biến nào có thể nhận giá trị Null, biến nào không thể nhận giá trị Null ngay từ khi được khởi tạo.
@@ -796,3 +805,4 @@ void main(List<String> args) {
   print("sCanBeNull -> $sCanBeNull");
 }
 ```
+
