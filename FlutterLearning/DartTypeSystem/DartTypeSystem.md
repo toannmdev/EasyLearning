@@ -17,8 +17,8 @@
 - [Why Null safety?](#why-null-safety)
 - [Null safety là gì?](#null-safety-là-gì)
 3. [Access modifier](#access-modifier)
-4. For loop
-5. Practise
+4. [For loop](#for-loop)
+5. [Practise](#practise)
 
 ## Dart Variables
 
