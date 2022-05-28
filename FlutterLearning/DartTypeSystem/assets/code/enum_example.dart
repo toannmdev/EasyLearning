@@ -35,6 +35,7 @@ void main(List<String> args) {
   List<DayOfWeeks> dayOfWeeks = DayOfWeeks.values;
   dayOfWeeks.forEach((element) {
     print("day is: ${element.getName()}");
+    // sẽ in ra: các ngày từ thứ 2 -> chủ nhật
     // day is: Thứ 2
     // day is: Thứ 3
     // day is: Thứ 4

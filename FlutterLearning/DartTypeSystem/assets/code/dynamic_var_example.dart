@@ -3,27 +3,27 @@ void main(List<String> args) {
   /// Ưu điểm: nhanh, và không cần quan tâm tới [runtimeType]
   var intVar = 10;
   print("intVar -> $intVar, loại dữ liệu (variableType) -> ${intVar.runtimeType}");
-  // intVar -> 10, loại dữ liệu (variableType) -> int
+  // sẽ in ra: intVar -> 10, loại dữ liệu (variableType) -> int
 
   var doubleVar = 10.0;
   print("doubleVar -> $doubleVar, loại dữ liệu (variableType) -> ${doubleVar.runtimeType}");
-  // doubleVar -> 10.0, loại dữ liệu (variableType) -> double
+  // sẽ in ra: doubleVar -> 10.0, loại dữ liệu (variableType) -> double
 
   var stringVar = "A";
   print("stringVar -> $stringVar, loại dữ liệu (variableType) -> ${stringVar.runtimeType}");
-  // stringVar -> A, loại dữ liệu (variableType) -> String
+  // sẽ in ra: stringVar -> A, loại dữ liệu (variableType) -> String
 
   var boolVar = 10;
   print("boolVar -> $boolVar, loại dữ liệu (variableType) -> ${boolVar.runtimeType}");
-  // boolVar -> 10, loại dữ liệu (variableType) -> int
+  // sẽ in ra: boolVar -> 10, loại dữ liệu (variableType) -> int
 
   var arrayVar = [1, 2, 3];
   print("arrayVar -> $arrayVar, loại dữ liệu (variableType) -> ${arrayVar.runtimeType}");
-  // arrayVar -> [1, 2, 3], loại dữ liệu (variableType) -> List<int>
+  // sẽ in ra: arrayVar -> [1, 2, 3], loại dữ liệu (variableType) -> List<int>
 
   var mapVar = {"key": "value"};
   print("mapVar -> $mapVar, loại dữ liệu (variableType) -> ${mapVar.runtimeType}");
-  // mapVar -> {key: value}, loại dữ liệu (variableType) -> _InternalLinkedHashMap<String, String>
+  // sẽ in ra: mapVar -> {key: value}, loại dữ liệu (variableType) -> _InternalLinkedHashMap<String, String>
 
 
 
@@ -32,32 +32,32 @@ void main(List<String> args) {
   /// Giống var, nhưng có thể thay đổi variable type
   dynamic dynamicA = 10;
   print("dynamicA -> $dynamicA, loại dữ liệu (variableType) -> ${dynamicA.runtimeType}");
-  // dynamicA -> 10, loại dữ liệu (variableType) -> int
+  // sẽ in ra: dynamicA -> 10, loại dữ liệu (variableType) -> int
 
   dynamicA = 10.0;
   print("dynamicA -> $dynamicA, loại dữ liệu (variableType) -> ${dynamicA.runtimeType}");
-  // dynamicA -> 10.0, loại dữ liệu (variableType) -> double
+  // sẽ in ra: dynamicA -> 10.0, loại dữ liệu (variableType) -> double
 
   dynamicA = "A";
   print("dynamicA -> $dynamicA, loại dữ liệu (variableType) -> ${dynamicA.runtimeType}");
-  // dynamicA -> A, loại dữ liệu (variableType) -> String
+  // sẽ in ra: dynamicA -> A, loại dữ liệu (variableType) -> String
 
   dynamicA = true;
   print("dynamicA -> $dynamicA, loại dữ liệu (variableType) -> ${dynamicA.runtimeType}");
-  // dynamicA -> true, loại dữ liệu (variableType) -> bool
+  // sẽ in ra: dynamicA -> true, loại dữ liệu (variableType) -> bool
 
   dynamicA = [1, 2, 3];
   print("dynamicA -> $dynamicA, loại dữ liệu (variableType) -> ${dynamicA.runtimeType}");
-  // dynamicA -> [1, 2, 3], loại dữ liệu (variableType) -> List<int>
+  // sẽ in ra: dynamicA -> [1, 2, 3], loại dữ liệu (variableType) -> List<int>
 
   dynamicA = {"key": "value"};
   print("dynamicA -> $dynamicA, loại dữ liệu (variableType) -> ${dynamicA.runtimeType}");
-  // dynamicA -> {key: value}, loại dữ liệu (variableType) -> _InternalLinkedHashMap<String, String>
+  // sẽ in ra: dynamicA -> {key: value}, loại dữ liệu (variableType) -> _InternalLinkedHashMap<String, String>
 
   /// error khi chạy, vì dynamicA hiện tại là Map, không có phương thức toInt()
   var a = dynamicA?.toInt();
   print("a -> $a");
-  // Class '_InternalLinkedHashMap<String, String>' has no instance method 'toInt'
+  // sẽ in ra: Class '_InternalLinkedHashMap<String, String>' has no instance method 'toInt'
 
   /*
    - dynamic đúng với cái tên của nó, có thể sử dụng linh hoạt trong rất nhiều trường hợp

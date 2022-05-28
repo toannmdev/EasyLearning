@@ -49,6 +49,14 @@ void main(List<String> args) {
 
 > :warning: **1 vài phương thức cần nhớ**: đa phần các phương thức của string trong dart đều giống so với java/kotlin/python....
 
+- split()
+- contains()
+- toUpperCase(), toLowerCase()
+- indexOf()
+- startsWith()
+- replaceAll()
+- trim()
+
 ```dart
 void main(List<String> args) {
   /// Có thể sử dụng nháy đơn '' hoặc nháy kép "" để khai báo 1 string
@@ -57,34 +65,34 @@ void main(List<String> args) {
 
   /// Tách kí tự trong 1 chuỗi
   List<String> splittedStrs = s.split(" ");
-  print("splittedStrs -> $splittedStrs"); // splittedStrs -> [Hello, world]
+  print("splittedStrs -> $splittedStrs"); // sẽ in ra: splittedStrs -> [Hello, world]
 
   /// kiểm tra 1 string có chứa 1 string khác không
   bool hasWorldStr = s.contains("world");
-  print("hasWorldStr -> $hasWorldStr"); // hasWorldStr -> true
+  print("hasWorldStr -> $hasWorldStr"); // sẽ in ra: hasWorldStr -> true
 
   /// chuyển đổi tất cả kí tự về kí tự viết hoa, viết thường
   String sUpperCase = s.toUpperCase();
   String sLowerCase = s.toLowerCase();
-  print("sUpperCase -> $sUpperCase"); // sUpperCase -> HELLO WORLD
-  print("sLowerCase -> $sLowerCase"); // sLowerCase -> hello world
+  print("sUpperCase -> $sUpperCase"); // sẽ in ra: sUpperCase -> HELLO WORLD
+  print("sLowerCase -> $sLowerCase"); // sẽ in ra: sLowerCase -> hello world
   
   /// lấy vị trí đầu tiên của kí tự 'o'
   int sIndexOf = s.indexOf("o");
-  print("sIndexOf -> $sIndexOf"); // sIndexOf -> 4
+  print("sIndexOf -> $sIndexOf"); // sẽ in ra: sIndexOf -> 4
 
   /// kiểm tra xem string bắt đầu với kí tự 'H'
   bool sStartWith = s.startsWith("H");
-  print("sStartWith -> $sStartWith"); // sStartWith -> true
+  print("sStartWith -> $sStartWith"); // sẽ in ra: sStartWith -> true
 
   /// thay thế các kí tự trong 1 chuỗi
   String sReplaced = s.replaceAll("world", "everyone");
-  print("sReplaced -> $sReplaced"); // sReplaced -> Hello everyone
+  print("sReplaced -> $sReplaced"); // sẽ in ra: sReplaced -> Hello everyone
 
   /// loại bỏ khoảng trắng ở đầu/cuối string
   String sTrimmed = s.trim();
-  print("s -> \"$s\""); // s -> "Hello world "
-  print("sTrimmed -> $sTrimmed"); // sTrimmed -> Hello world
+  print("s -> \"$s\""); // sẽ in ra: s -> "Hello world "
+  print("sTrimmed -> $sTrimmed"); // sẽ in ra: sTrimmed -> Hello world
 }
 ```
 
@@ -101,8 +109,8 @@ void main(List<String> args) {
   int a = 10;
   int b = -10;
 
-  print("a = $a"); // a = 10
-  print("b = $b"); // b = -10
+  print("a = $a"); // sẽ in ra: a = 10
+  print("b = $b"); // sẽ in ra: b = -10
 }
 ```
 
@@ -127,8 +135,8 @@ void main(List<String> args) {
   int _resultInt = (a + b + c + d).toInt();
   double _resultDouble = (a + b + c + d);
 
-  print("_resultInt -> $_resultInt"); // _resultInt -> 0
-  print("_resultDouble -> $_resultDouble"); // _resultInt -> 0.0
+  print("_resultInt -> $_resultInt"); // sẽ in ra: _resultInt -> 0
+  print("_resultDouble -> $_resultDouble"); // sẽ in ra: _resultInt -> 0.0
 }
 ```
 2. Tổng kết:
@@ -149,9 +157,9 @@ void main(List<String> args) {
   String _aStr = a.toString();
   String _bStr = b.toString();
 
-  print("int a toString: $_aStr"); // int a toString: 10
+  print("int a toString: $_aStr"); // sẽ in ra: int a toString: 10
 
-  print("double b toString: $_bStr"); // double b toString: -10.0
+  print("double b toString: $_bStr"); // sẽ in ra: double b toString: -10.0
 }
 ```
 
@@ -161,7 +169,7 @@ void main(List<String> args) {
   int a = 10;
   double _aDouble = a.toDouble();
 
-  print("int a toDouble: $_aDouble"); // int a toDouble: 10.0
+  print("int a toDouble: $_aDouble"); // sẽ in ra: int a toDouble: 10.0
 }
 ```
 
@@ -171,7 +179,7 @@ void main(List<String> args) {
   double b = -10.0;
   int _bInt = b.toInt();
 
-  print("double b toInt: $_bInt"); // double b toDouble: -10
+  print("double b toInt: $_bInt"); // sẽ in ra: double b toDouble: -10
 }
 ```
 
@@ -183,8 +191,8 @@ void main(List<String> args) {
   int _cInt = int.parse(c);
   double _cDouble = double.parse(c);
 
-  print("Parse String c to int: $_cInt"); // Parse String c to int: 20
-  print("Parse String c to double: $_cDouble"); // Parse String c to double: 20.0
+  print("Parse String c to int: $_cInt"); // sẽ in ra: Parse String c to int: 20
+  print("Parse String c to double: $_cDouble"); // sẽ in ra: Parse String c to double: 20.0
 }
 ```
 
@@ -200,23 +208,23 @@ void main(List<String> args) {
   bool b = false;
 
   if (a) { /// các viết tắt khi so sánh bool == true
-    print("a is $a"); // a is true
+    print("a is $a"); // sẽ in ra: a is true
   }
 
   if (a == true) { /// viết kiểu này rõ nghĩa hơn
-    print("a == true"); // a == true
+    print("a == true"); // sẽ in ra: a == true
   }
 
   if (!b) { /// cách viết tắt khi so sánh bool == false
-    print("b is $b"); // b is false
+    print("b is $b"); // sẽ in ra: b is false
   }
 
   if (a && !b) { /// so sánh nhiều mệnh đề, viết tắt
-    print("a == true and b == false"); // a == true and b == false
+    print("a == true and b == false"); // sẽ in ra: a == true and b == false
   }
 
   if (a || b) { /// so sánh nhiều mệnh đề, viết tắt
-    print("a == true or b == true"); // a == true and b == false
+    print("a == true or b == true"); // sẽ in ra: a == true and b == false
   }
 }
 ```
@@ -251,15 +259,15 @@ void main(List<String> args) {
 
   strs.add("d");
   print("strs after adding \"d\" -> $strs");
-  // strs after adding "d" -> [a, b, c, d]
+  // sẽ in ra: strs after adding "d" -> [a, b, c, d]
 
   strs.remove("d");
   print("strs after removing \"d\" -> " + strs.toString()); 
-  // strs_1 after adding "d" -> [a, b, c, d]
+  // sẽ in ra: strs_1 after adding "d" -> [a, b, c, d]
 
   /// đoạn code trên, nhưng sử dụng [Builder Design Pattern] để viết code ngắn gọn hơn
   print("strs after adding \"d\" then remove \"d\" -> ${strs..add("d")..remove("d")}"); 
-  // strs after adding "d" then remove "d" -> [a, b, c]
+  // sẽ in ra: strs after adding "d" then remove "d" -> [a, b, c]
 }
 ```
 
@@ -272,7 +280,7 @@ void main(List<String> args) {
   List<String> strs_2 = ["d", "e", "f"];
   strs_1.addAll(strs_2);
   print("strs_1 after addAll str_2 -> $strs_1");
-  // strs_1 after addAll str_2 -> [a, b, c, d, e, f]
+  // sẽ in ra: strs_1 after addAll str_2 -> [a, b, c, d, e, f]
 }
 ```
 
@@ -284,7 +292,7 @@ void main(List<String> args) {
   
   List<String> strs_1_subList = strs_1.sublist(2, 4);
   print("strs_1_subList -> $strs_1_subList");
-  // strs_1_subList -> [c, d]
+  // sẽ in ra: strs_1_subList -> [c, d]
 }
 ```
 
@@ -298,7 +306,7 @@ void main(List<String> args) {
   /// lấy 1 phần tử tại 1 vị trí index trong array
   String _strByIndex = strs_1[0];
   print("_strByIndex -> $_strByIndex");
-  // _strByIndex -> a
+  // sẽ in ra: _strByIndex -> a
 }
 ```
 
@@ -329,13 +337,13 @@ void main(List<String> args) {
   /// cách viết ngắn gọn
   Map map = {"key": "value"};
   print("map -> $map");
-  // map -> {key: value}
+  // sẽ in ra: map -> {key: value}
   
-  // cách viết rõ nghĩa
+  /// cách viết rõ nghĩa
   Map<String, String> map1 = Map<String, String>();
   map1["key"] = "value";
   print("map1 -> $map1");
-  // map1 -> {key: value}
+  // sẽ in ra: map1 -> {key: value}
 }
 ```
 
@@ -350,12 +358,12 @@ void main(List<String> args) {
   Map<String, String> map1 = Map<String, String>();
   map1["key"] = "value";
   print("map1 -> $map1");
-  // map1 -> {key: value}
+  // sẽ in ra: map1 -> {key: value}
 
   /// 1 vài phương thức cơ bản
   Map<String, String> map2 = Map.from(map1);
   print("map2 -> $map2");
-  // map2 -> {key: value}
+  // sẽ in ra: map2 -> {key: value}
 
   String key = map1.keys.first;
   print("key from map1 -> $key");
@@ -363,13 +371,13 @@ void main(List<String> args) {
 
   String value = map1.values.first;
   print("value from map1 -> $value");
-  // value from map1 -> value
+  // sẽ in ra: value from map1 -> value
 
   /// trong map key là duy nhất
   /// không thể có 2 key cùng giá trị
   Map map12 = map1..addAll(map2);
   print("map12 -> $map12");
-  // map12 -> {key: value}
+  // sẽ in ra: map12 -> {key: value}
 }
 ```
 
@@ -379,7 +387,7 @@ void main(List<String> args) {
   /// điều gì sẽ xảy ra nếu add 1 map với key mới?
   Map mapWithNewValue = {"key": "value"}..addAll({"key": "newValue"});
   print("mapWithNewValue -> $mapWithNewValue");
-  // mapWithNewValue -> {key: newValue}
+  // sẽ in ra: mapWithNewValue -> {key: newValue}
 }
 ```
 
@@ -406,27 +414,27 @@ void main(List<String> args) {
   /// Ưu điểm: nhanh, và không cần quan tâm tới [runtimeType]
   var intVar = 10;
   print("intVar -> $intVar, loại dữ liệu (variableType) -> ${intVar.runtimeType}");
-  // intVar -> 10, loại dữ liệu (variableType) -> int
+  // sẽ in ra: intVar -> 10, loại dữ liệu (variableType) -> int
 
   var doubleVar = 10.0;
   print("doubleVar -> $doubleVar, loại dữ liệu (variableType) -> ${doubleVar.runtimeType}");
-  // doubleVar -> 10.0, loại dữ liệu (variableType) -> double
+  // sẽ in ra: doubleVar -> 10.0, loại dữ liệu (variableType) -> double
 
   var stringVar = "A";
   print("stringVar -> $stringVar, loại dữ liệu (variableType) -> ${stringVar.runtimeType}");
-  // stringVar -> A, loại dữ liệu (variableType) -> String
+  // sẽ in ra: stringVar -> A, loại dữ liệu (variableType) -> String
 
   var boolVar = 10;
   print("boolVar -> $boolVar, loại dữ liệu (variableType) -> ${boolVar.runtimeType}");
-  // boolVar -> 10, loại dữ liệu (variableType) -> int
+  // sẽ in ra: boolVar -> 10, loại dữ liệu (variableType) -> int
 
   var arrayVar = [1, 2, 3];
   print("arrayVar -> $arrayVar, loại dữ liệu (variableType) -> ${arrayVar.runtimeType}");
-  // arrayVar -> [1, 2, 3], loại dữ liệu (variableType) -> List<int>
+  // sẽ in ra: arrayVar -> [1, 2, 3], loại dữ liệu (variableType) -> List<int>
 
   var mapVar = {"key": "value"};
   print("mapVar -> $mapVar, loại dữ liệu (variableType) -> ${mapVar.runtimeType}");
-  // mapVar -> {key: value}, loại dữ liệu (variableType) -> _InternalLinkedHashMap<String, String>
+  // sẽ in ra: mapVar -> {key: value}, loại dữ liệu (variableType) -> _InternalLinkedHashMap<String, String>
 }
 ```
 
@@ -437,34 +445,34 @@ void main(List<String> args) {
   /// Giống var, nhưng có thể thay đổi variable type
   dynamic dynamicA = 10;
   print("dynamicA -> $dynamicA, loại dữ liệu (variableType) -> ${dynamicA.runtimeType}");
-  // dynamicA -> 10, loại dữ liệu (variableType) -> int
+  // sẽ in ra: dynamicA -> 10, loại dữ liệu (variableType) -> int
 
   dynamicA = 10.0;
   print("dynamicA -> $dynamicA, loại dữ liệu (variableType) -> ${dynamicA.runtimeType}");
-  // dynamicA -> 10.0, loại dữ liệu (variableType) -> double
+  // sẽ in ra: dynamicA -> 10.0, loại dữ liệu (variableType) -> double
 
   dynamicA = "A";
   print("dynamicA -> $dynamicA, loại dữ liệu (variableType) -> ${dynamicA.runtimeType}");
-  // dynamicA -> A, loại dữ liệu (variableType) -> String
+  // sẽ in ra: dynamicA -> A, loại dữ liệu (variableType) -> String
 
   dynamicA = true;
   print("dynamicA -> $dynamicA, loại dữ liệu (variableType) -> ${dynamicA.runtimeType}");
-  // dynamicA -> true, loại dữ liệu (variableType) -> bool
+  // sẽ in ra: dynamicA -> true, loại dữ liệu (variableType) -> bool
 
   dynamicA = [1, 2, 3];
   print("dynamicA -> $dynamicA, loại dữ liệu (variableType) -> ${dynamicA.runtimeType}");
-  // dynamicA -> [1, 2, 3], loại dữ liệu (variableType) -> List<int>
+  // sẽ in ra: dynamicA -> [1, 2, 3], loại dữ liệu (variableType) -> List<int>
 
   dynamicA = {"key": "value"};
   print("dynamicA -> $dynamicA, loại dữ liệu (variableType) -> ${dynamicA.runtimeType}");
-  // dynamicA -> {key: value}, loại dữ liệu (variableType) -> _InternalLinkedHashMap<String, String>
+  // sẽ in ra: dynamicA -> {key: value}, loại dữ liệu (variableType) -> _InternalLinkedHashMap<String, String>
 
 
 
   /// error khi chạy, vì dynamicA hiện tại là Map, không có phương thức toInt()
   var a = dynamicA.toInt();
   print("a -> $a");
-  // Class '_InternalLinkedHashMap<String, String>' has no instance method 'toInt'
+  // sẽ in ra: Class '_InternalLinkedHashMap<String, String>' has no instance method 'toInt'
 
   /*
    - dynamic đúng với cái tên của nó, có thể sử dụng linh hoạt trong rất nhiều trường hợp
@@ -522,7 +530,7 @@ Hàm là một khối lệnh thực hiện một tác vụ, khối lệnh này �
 ```dart
   /// viết và gọi function (hàm)
   /// cách gọi hàm phổ biến
-  test("cách gọi hàm phổ biến"); // Đây là hàm test, params test: cách gọi hàm phổ biến
+  test("cách gọi hàm phổ biến"); // sẽ in ra: Đây là hàm test, params test: cách gọi hàm phổ biến
 
   void test(String test){
     print("Đây là hàm test, params test: $test");
@@ -533,7 +541,7 @@ Cách viết khác:
 ```dart
   /// vì trong dart, mọi thứ đều là đối tượng,
   /// và hàm kế thừa Function, nên có thể viết như này
-  test.call("gọi qua method call()"); // Đây là hàm test, params test: gọi qua method call()
+  test.call("gọi qua method call()"); // sẽ in ra: Đây là hàm test, params test: gọi qua method call()
 
   void test(String test){
     print("Đây là hàm test, params test: $test");
@@ -545,17 +553,17 @@ Function cũng có thể truyền vào như 1 params:
 void main(List<String> args) {
   /// hoặc có thể truyền vào như 1 parameter....
   functionTest(() => test("function call function"));
-  // Đây là hàm test, params test: function call function
+  // sẽ in ra: Đây là hàm test, params test: function call function
 
 
   var _ret = functionTestCallBack(parseStringFromInt);
   print("Kết quả khi gọi functionTestCallBack -> $_ret");
-  // Kết quả khi gọi functionTestCallBack -> Kết quả thực thi function: -1
+  // sẽ in ra: Kết quả khi gọi functionTestCallBack -> Kết quả thực thi function: -1
 
 
   var _ret1 = functionTestCallBack((intStr) => parseStringFromInt("10"));
   print("Kết quả khi gọi functionTestCallBack -> $_ret1");
-  // Kết quả khi gọi functionTestCallBack -> Kết quả thực thi function: 10
+  // sẽ in ra: Kết quả khi gọi functionTestCallBack -> Kết quả thực thi function: 10
 }
 
 void test(String test){
@@ -588,16 +596,17 @@ void main(List<String> args) {
   /// - nếu không truyền params vào function: params sẽ nhận giá trị mặc định
   /// - nếu truyền params vào function: params sẽ nhận giá trị được truyền vào từ function
   functionWithOptionalParam();
-  // params a=a, b=b
+  // sẽ in ra: params a=a, b=b
   
   functionWithOptionalParam(
     b: "không phải giá trị b",
     a: "không phải giá trị a"
   );
-  // params a=không phải giá trị a, b=không phải giá trị b
+  // sẽ in ra: params a=không phải giá trị a, b=không phải giá trị b
 
   functionWithPositionalParam("a", "b", "c");
-  // params a=a, b=b, b=c, d=
+  // sẽ in ra: params a=a, b=b, b=c, d=
+  /// vì không truyền vào d, nên d=""
 }
 
 void functionWithOptionalParam({String a = "a", String b = "b"}){
@@ -624,8 +633,8 @@ void main(List<String> args) {
     _inlineFunction2();
   }
   _inlineFunction1();
-  // _inlineFunction1
-  // _inlineFunction2
+  // sẽ in ra: _inlineFunction1
+  // sẽ in ra: _inlineFunction2
 }
 ```
 
@@ -636,7 +645,7 @@ void main(List<String> args) {
   /// function [test] được viết thêm vào lớp String
   String a = "a";
   a.test();
-  // Mở rộng function trên lớp String
+  // sẽ in ra: Mở rộng function trên lớp String
 }
 
 extension stringExt on String{
@@ -700,6 +709,7 @@ void main(List<String> args) {
   List<DayOfWeeks> dayOfWeeks = DayOfWeeks.values;
   dayOfWeeks.forEach((element) {
     print("day is: ${element.getName()}");
+    // sẽ in ra: các ngày từ thứ 2 -> chủ nhật
     // day is: Thứ 2
     // day is: Thứ 3
     // day is: Thứ 4
