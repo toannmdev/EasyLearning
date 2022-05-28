@@ -746,7 +746,7 @@ Từ khi chuyển qua Flutter, tôi dùng version 1.12.13, lúc đó tôi chưa 
 Trong dart chia rõ `Non-Nullable Variables`, tức các biến không thể null, và `Nullable Variables`, tức các biến có thể nhận giá trị null
 \
 &nbsp;
-[<img src="assets/images/non-nullable-vs-nullable-types.png" width="300"/>](assets/images/non-nullable-vs-nullable-types.png)
+[<img src="assets/images/non-nullable-vs-nullable-types.png" width="600"/>](assets/images/non-nullable-vs-nullable-types.png)
 
 \
 &nbsp;
