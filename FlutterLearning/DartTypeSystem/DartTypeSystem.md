@@ -16,7 +16,7 @@
 2. [Null safety](#null-safety)
 - [Why Null safety?](#why-null-safety)
 - [Null safety là gì?](#null-safety-là-gì)
-3. Access modifier
+3. [Access modifier](#access-modifier)
 4. For loop
 5. Practise
 
@@ -810,3 +810,165 @@ void main(List<String> args) {
 }
 ```
 
+\
+&nbsp;
+
+## Access modifier
+
+Trong các ngôn ngữ lập trình như kotlin, java, swift thường chia Access modifier thành 4 levels:
+
+\
+&nbsp;
+
+[<img src="assets/images/java_access_modifiers.jpeg" width="300"/>](assets/images/java_access_modifiers.jpeg)
+
+Trong dart, chỉ tồn tại duy nhất 2 levels: public và private
+
+```dart
+import 'test.dart';
+
+void main(List<String> args) {
+  /// để khai báo biến private, sử dụng underscrore `_`
+  /// _a có thể truy cập từ hàm main
+  InMainClass inMainClass = InMainClass();
+  inMainClass._a; // _a là biến private trong class A, nhưng nằm cùng file với 
+
+
+  /// ở 1 trường hợp khác, _a không thể truy cập, vì nằm ở file khác, chú ý phần import 'test.dart';
+  Test test = Test();
+  test._a; // ở 1 trường hợp khác, _a không thể truy cập, vì nằm ở file khác, chú ý phần import 'test.dart';
+
+
+  /// khi sử dụng inline function, cần chú ý tới access modifiers
+  /// không thể truy cập các biến nằm trong inline function
+  void function(){
+    String inFunction = inMainClass._a; // có thể truy cập
+  }
+
+  String outFunction = inFunction; // không thể truy cập
+}
+
+class InMainClass {
+  String _a = "";
+}
+```
+
+\
+&nbsp;
+Tổng kết
+- Trong dart chỉ có duy nhất 2 access modifiers levels: public và private, mặc định là public
+- Khi sử dụng inline function, cần chú ý tới acces modifiers, khi ở ngoài inline function sẽ không thể truy cập các biến nằm trong inline function.
+
+\
+&nbsp;
+
+## For loop
+Trong các ngôn ngữ lập trình, vòng lặp cho phép một khối mã được thực thi lặp đi lặp lại nhiều lần.
+
+Dart cũng như các ngôn ngữ lập trình khác, đều hỗ trợ các vòng lặp
+- for
+- for in
+- while
+- do while
+
+For: áp dụng theo các điều kiện
+```dart
+void main() {
+  /// vòng for cơ bản, theo index
+  for (int i = 0; i < 10; i = i + 1) {
+    print('i= $i');
+    // sẽ in ra giá trị của i từ 0 -> 9
+    /*
+      i= 0
+      i= 1
+      i= 2
+      i= 3
+      i= 4
+      i= 5
+      i= 6
+      i= 7
+      i= 8
+      i= 9
+    */
+  }
+}
+```
+
+\
+&nbsp;
+For in: áp dụng lặp từng phần tử trong mảng
+```dart
+void main(List<String> args) {
+  List ints = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  /// cũng là vòng lặp nhưng lặp qua từng giá trị trong 1 mảng
+  for (int i in ints) {
+    print("i = $i"); 
+    // sẽ in ra giá trị của i 0 -> 9
+    /*
+      i = 0
+      i = 1
+      i = 2
+      i = 3
+      i = 4
+      i = 5
+      i = 6
+      i = 7
+      i = 8
+      i = 9
+    */
+  }
+}
+```
+
+While: áp dụng cho 1 điều kiện chưa thể xác định, chỉ có thể xác định khi thực thi 1 hoặc nhiều khối lệnh
+
+```dart
+void main(List<String> args) {
+  int x = 0;
+  // trong khi 1 điều kiện đúng, thực thi 1 khối lệnh
+  while (x < 10){
+    x++;
+    print("x -> $x");
+    // sẽ in ra các giá trị từ 1 -> 10,
+    // khi x = 10, while sẽ dừng, vì điều kiện để chạy while là x < 10
+  }
+}
+```
+
+do while:
+```dart
+void main(List<String> args) {
+  int x = 0;
+  /// thực thi khối lệnh trước khi kiểm tra điều kiện trong while
+  do {
+    x++;
+    print("x -> $x"); // sẽ in ra giá trị của x từ 1 -> 10
+  } while (x > 0 && x < 10);  
+}
+```
+
+> :warning: **Chú ý**
+Khi sử dụng vòng lặp, cần chú ý các điều kiện lặp để hạn chế `infinity loop` gây treo, lag ứng dụng.
+
+\
+&nbsp;
+
+Tổng kết:
+Vòng lặp trong dart giống các ngôn ngữ lập trình phổ biến khác như: java, kotlin, swift, python....
+
+\
+&nbsp;
+
+## Practise
+- Viết 1 chương trình:
+  1. Khai báo toàn bộ các kiểu dữ liệu: Non-Nullable Types và Nullable Types, dynamic, var
+  2. Có sử dụng các từ khoá static, final, late const
+  3. Viết các hàm chuyển đổi qua lại giữa string, int, double. Ví dụ:
+  \
+  &nbsp;
+  ```dart
+    String getIntFromString(int input){
+      return input.toString();
+    }
+  ```
+  4. Viết 1 hàm tính giai thừa của 6
