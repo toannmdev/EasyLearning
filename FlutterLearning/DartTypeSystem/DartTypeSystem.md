@@ -25,7 +25,9 @@
 Các kiểu dữ liệu chính trong dart
 \
 &nbsp;
-![Dart Non-nullable](assets/images/non-nullable-types.png "Dart Non-nullable")
+
+[<img src="assets/images/non-nullable-types.png" width="300"/>](assets/images/non-nullable-types.png)
+
 
 
 ### String
@@ -730,20 +732,21 @@ Tôi vẫn nhớ những ngày đầu tiên code java, hầu hết lỗi tôi m�
 Xin mượn tạm 1 vài hình ảnh bên phía java
 \
 &nbsp;
-![Java null pointer exception 1](assets/images/null_pointer_exception_1.png "Java null pointer exception 1")
 
+[<img src="assets/images/null_pointer_exception_1.png" width="300"/>](assets/images/null_pointer_exception_1.png)
 \
 &nbsp;
-![Java null pointer exception 2](assets/images/null_pointer_exception_2.png "Java null pointer exception 2")
 
+[<img src="assets/images/null_pointer_exception_2.png" width="300"/>](assets/images/null_pointer_exception_2.png)
 \
 &nbsp;
+
 Từ khi chuyển qua Flutter, tôi dùng version 1.12.13, lúc đó tôi chưa thực sự có niềm tin vào Flutter, vì chưa có Null Safety, nhưng từ version 2.0 trở lên, Flutter hiện tại đã khác xưa.
 
 Trong dart chia rõ `Non-Nullable Variables`, tức các biến không thể null, và `Nullable Variables`, tức các biến có thể nhận giá trị null
 \
 &nbsp;
-![Non-Nullable types vs Nullable Type](assets/images/non-nullable-vs-nullable-types.png "Non-Nullable types vs Nullable Type")
+[<img src="assets/images/non-nullable-vs-nullable-types.png" width="300"/>](assets/images/non-nullable-vs-nullable-types.png)
 
 \
 &nbsp;
@@ -760,7 +763,7 @@ void main(List<String> args) {
 
 \
 &nbsp;
-![String Nullable Hierarchy](assets/images/string-nullable-hierarchy.png "String Nullable Hierarchy")
+[<img src="assets/images/string-nullable-hierarchy.png" width="300"/>](assets/images/string-nullable-hierarchy.png)
 
 Như vậy, Flutter đã tách biệt rõ biến nào có thể nhận giá trị Null, biến nào không thể nhận giá trị Null ngay từ khi được khởi tạo.
 
