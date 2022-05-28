@@ -744,6 +744,7 @@ Xin mượn tạm 1 vài hình ảnh bên phía java
 Từ khi chuyển qua Flutter, tôi dùng version 1.12.13, lúc đó tôi chưa thực sự có niềm tin vào Flutter, vì chưa có Null Safety, nhưng từ version 2.0 trở lên, Flutter hiện tại đã khác xưa.
 
 Trong dart chia rõ `Non-Nullable Variables`, tức các biến không thể null, và `Nullable Variables`, tức các biến có thể nhận giá trị null
+
 \
 &nbsp;
 [<img src="assets/images/non-nullable-vs-nullable-types.png" width="600"/>](assets/images/non-nullable-vs-nullable-types.png)
