@@ -265,7 +265,7 @@ void main(List<String> args) {
   print("strs after removing \"d\" -> " + strs.toString()); 
   // sẽ in ra: strs_1 after adding "d" -> [a, b, c, d]
 
-  /// đoạn code trên, nhưng sử dụng [Builder Design Pattern] để viết code ngắn gọn hơn
+  /// đoạn code trên, nhưng sử dụng `Cascade notation` giống với [Builder Design Pattern] để viết code ngắn gọn hơn
   print("strs after adding \"d\" then remove \"d\" -> ${strs..add("d")..remove("d")}"); 
   // sẽ in ra: strs after adding "d" then remove "d" -> [a, b, c]
 }
@@ -526,6 +526,33 @@ class A {
 }
 ```
 
+const và final trong dart cũng như các ngôn ngữ lập trình khác:
+
+- Giống:
+    - Đều được dùng để ngăn giá trị của biến thay đổi sau khi khởi tạo.
+- Khác:
+    - const được khởi tạo ngay khi compile code, final được gán giá trị sau khi compile code, và chỉ được khởi tạo khi nó được truy cập tới.
+    - Không phải cung cấp giá trị khởi tạo cho các biến final, nhưng với const là bắt buộc.
+    - Một biến instance có thể là final nhưng không thể là const, vì chả có class nào được khởi tạo khi trước compile cả
+
+> :warning: **Chú ý** khi sử dụng late, vì có thể phá vỡ Null Safety:
+
+```dart
+void main(List<String> args) {
+  DataKeeper dataKeeper = DataKeeper();
+
+  print("a -> ${dataKeeper.a.toString()}");
+  // sẽ in ra: 
+  // Unhandled exception:
+  // LateInitializationError: Field 'a' has not been initialized.
+}
+
+class DataKeeper{
+  late int a;
+}
+```
+
+
 2. Tổng kết
 - Nên hạn chế sử dụng dynamic
 - Trong dart cũng hỗ trợ static, final, late, const
@@ -665,6 +692,43 @@ extension stringExt on String{
   }
 }
 ```
+
+> :warning: **Chú ý**
+Đây là 1 trong những lỗi đầu đời của tôi, hy vọng bạn không mắc phải
+
+```dart
+void main() {
+  int value = 0;
+  void test(int value){
+    value = 10; // chỉ thay đổi biến value, trong scope function test
+    print("trong function test value -> $value");
+  }
+  test(value);
+  print("ngoài fuction test value -> $value"); // kết quả value = 0
+}
+```
+
+Vậy có cách nào để truyền params vào function mà vẫn giữ được tham chiếu của nó không? Đoạn này tiếng việt mình cũng không biết diễn tả có đúng không nữa, tiếng anh mình sẽ ghi là `'pass params by reference'`
+
+```dart
+void main(List<String> args) {
+  var data = DataKeeper(10);
+  print("data ban đầu: ${data.value}"); // sẽ in ra: data ban đầu: 10
+  increase(data);
+  print("data sau khi increase: ${data.value}"); // sẽ in ra: data sau khi increase: 20
+}
+
+class DataKeeper {
+  int value;
+  DataKeeper(this.value);
+}
+
+void increase(DataKeeper data) {
+  data.value = 20;
+}
+```
+
+Đơn giản là dùng 1 class `DataKeeper` để cập nhật lại giá trị của biến
 
 
 2. Tổng kết
@@ -993,6 +1057,7 @@ Vòng lặp trong dart giống các ngôn ngữ lập trình phổ biến khác 
   \
   &nbsp;
   ```dart
+    /// ví dụ về 4. hàm chuyển đổi qua lại giữa string, int, double
     String getIntFromString(int input){
       return input.toString();
     }
