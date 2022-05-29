@@ -90,3 +90,16 @@ void main(List<String> args) {
 //     initC();
 //   }
 // }
+
+// void main(List<String> args) {
+//   Test test = Test().instance(); // phải chỉ rõ rằng hàm `instance` trả về đối tượng `Test`
+  
+//   var a = Test().instance(); // không cần quan tâm tới `variable type` của hàm `instance`
+
+//   /// sử dụng var/dynamic thích hợp cho việc trung chuyển các `variable`
+//   /// tức chuyển từ hàm này qua hàm khác, class này qua class khác
+// }
+
+// class Test{
+//   Test instance(){return this;}
+// }

@@ -357,27 +357,21 @@ Trong dart cũng có hỗ trợ HashMap như các ngôn ngữ lập trình khác
 void main(List<String> args) {
   Map<String, String> map1 = Map<String, String>();
   map1["key"] = "value";
-  print("map1 -> $map1");
-  // sẽ in ra: map1 -> {key: value}
+  print("map1 -> $map1"); // sẽ in ra: map1 -> {key: value}
 
   /// 1 vài phương thức cơ bản
   Map<String, String> map2 = Map.from(map1);
-  print("map2 -> $map2");
-  // sẽ in ra: map2 -> {key: value}
+  print("map2 -> $map2"); // sẽ in ra: map2 -> {key: value}
 
   String key = map1.keys.first;
-  print("key from map1 -> $key");
-  // key from map1 -> key
+  print("key from map1 -> $key"); // key from map1 -> key
 
   String value = map1.values.first;
-  print("value from map1 -> $value");
-  // sẽ in ra: value from map1 -> value
+  print("value from map1 -> $value"); // sẽ in ra: value from map1 -> value
 
-  /// trong map key là duy nhất
-  /// không thể có 2 key cùng giá trị
+  /// trong map key là duy nhất, không thể có 2 key cùng giá trị
   Map map12 = map1..addAll(map2);
-  print("map12 -> $map12");
-  // sẽ in ra: map12 -> {key: value}
+  print("map12 -> $map12"); // sẽ in ra: map12 -> {key: value}
 }
 ```
 
@@ -480,6 +474,23 @@ void main(List<String> args) {
       - Trong ví dụ trên, nếu không check [runtimeType] thì khó mà biết được variable type của dynamic,
       điều này dễ dẫn tới việc sử dụng sai phương thức
   */
+}
+```
+
+Tác dụng của var/dynamic, cùng xem ví dụ sau:
+
+```dart
+void main(List<String> args) {
+  Test test = Test().instance(); // phải chỉ rõ rằng hàm `instance` trả về đối tượng `Test`
+  
+  var a = Test().instance(); // không cần quan tâm tới `variable type` của hàm `instance`
+
+  /// sử dụng var/dynamic thích hợp cho việc trung chuyển các `variable`
+  /// tức chuyển từ hàm này qua hàm khác, class này qua class khác
+}
+
+class Test{
+  Test instance(){return this;}
 }
 ```
 
@@ -663,7 +674,6 @@ extension stringExt on String{
 - Function với optional params linh hoạt trong hầu hết các trường hợp.
 - Function với positioned params sẽ khó mở rộng trong tương lai.
 Ví dụ 1 function với positioned params, sẽ không khả thi khi cần truyền thêm params khác variable type.
-]
 &nbsp;
 
 ### Enum
@@ -750,6 +760,12 @@ Xin mượn tạm 1 vài hình ảnh bên phía java
 [<img src="assets/images/null_pointer_exception_2.png" width="300"/>](assets/images/null_pointer_exception_2.png)
 \
 &nbsp;
+
+[<img src="assets/images/null_pointer_exception_report.jpeg" width="300"/>](assets/images/null_pointer_exception_report.jpeg)
+\
+&nbsp;
+
+
 
 Từ khi chuyển qua Flutter, tôi dùng version 1.12.13, lúc đó tôi chưa thực sự có niềm tin vào Flutter, vì chưa có Null Safety, nhưng từ version 2.0 trở lên, Flutter hiện tại đã khác xưa.
 
@@ -867,7 +883,7 @@ class InMainClass {
 &nbsp;
 Tổng kết
 - Trong dart chỉ có duy nhất 2 access modifiers levels: public và private, mặc định là public
-- Khi sử dụng inline function, cần chú ý tới acces modifiers, khi ở ngoài inline function sẽ không thể truy cập các biến nằm trong inline function.
+- Khi sử dụng inline function, cần chú ý tới access modifier, khi ở ngoài inline function sẽ không thể truy cập các biến nằm trong inline function.
 
 \
 &nbsp;
