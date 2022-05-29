@@ -15,7 +15,7 @@
 - [Tổng kết Dart Variables](#tổng-kết-dart-variables)
 2. [Null safety](#null-safety)
 - [Why Null safety?](#why-null-safety)
-- [Null safety là gì?](#null-safety-là-gì)
+- [Null aware](#null-aware)
 3. [Access modifier](#access-modifier)
 4. [For loop](#for-loop)
 5. [Practise](#practise)
