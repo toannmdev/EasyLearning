@@ -149,14 +149,12 @@ Một ứng dụng Flutter có nhiều màn hình khác nhau và mỗi màn hìn
 
 Như vậy khái niệm vòng đời ứng dụng trong Flutter, chính là vòng đời của trạng thái (State) .
 Vì là quản lý theo trạng thái ( State) nên chúng ta chia làm hai loại có state ( Stateful ) và không có State (Stateless).
-
 \
 &nbsp;
 
 Với StatelessWidget chỉ đơn thuần là nhận và hiển thị dữ liệu, không liên quan tới `State` nên StatelessWidget không có vòng đời
 
 Việc ghi đè phương thức `build` là dùng để render Graphic UI( user interface), hiển thị lên màn hình cho người dùng.
-
 \
 &nbsp;
 
@@ -235,7 +233,7 @@ Mình tin qua các ví dụ trên, chúng ta đã có hiểu được widget là
 \
 &nbsp;
 
-[<img src="assets/images/flutter_catalog.png" width="300"/>](assets/images/flutter_catalog.png)
+[<img src="assets/images/flutter_catalog.png" width="800"/>](assets/images/flutter_catalog.png)
 
 đây là 1 hình ảnh về Container, được lấy từ ứng dụng trên. 
 
@@ -254,7 +252,8 @@ MaterialApp, CupertinoApp là widget cung cấp:
 
 tới cho toàn bộ các widget nằm bên trong nó.
 
-*Trong 1 ứng dụng, chỉ nên tồn tại duy nhất 1 MaterialApp, hoặc 1 CupertinoApp.*
+> :warning: *Trong 1 ứng dụng, chỉ nên tồn tại duy nhất 1 MaterialApp, hoặc 1 CupertinoApp.*
+
 
 **Vậy điểm khác biệt giữa MaterialApp và CupertinoApp là gì?**
 
@@ -474,7 +473,7 @@ return Container(
         child: Container(
           width: 200,
           height: 200,
-          decoration:  BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(24)),
+          decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(24)),
         ),
       ),
     );
@@ -579,3 +578,16 @@ Các kiểu căn chỉnh Column, Row:
 
 `crossAxisAlignment`
 [<img src="assets/images/column-row/Column-CrossAxisAlignment.png" width="200"/>](assets/images/column-row/Column-CrossAxisAlignment.png)
+
+## Homework
+Xây dựng giao diện ứng dụng như ảnh:
+
+[<img src="assets/images/homework/result.png" width="200"/>](assets/images/homework/result.png)
+
+- Khi click vào Like: nếu chưa thích, chuyển về trạng thái Đã thích. Nếu Đã thích, chuyển về trạng thái Chưa thích.
+- Khi click vào Floating Button (+): tăng currentCounter lên 1 đơn vị.
+
+
+[<img src="assets/images/homework/result.mp4" width="200"/>](assets/images/homework/result.mp4)
+
+![aaaa](assets/images/homework/result.mp4)
