@@ -25,21 +25,20 @@ Trong Flutter, các widget được lồng vào nhau để xây dựng giao di�
 
 Ví dụ 1 màn hình được build trên iphone simulator
 
-Widget tree trong devtool
 [<img src="assets/images/widget_tree_example_ios.png" width="300"/>](assets/images/widget_tree_example_ios.png)
 
 \
 &nbsp;
 sẽ có Widget tree như thế này:
 
-Trong devtool
+- Trong devtool
 
 [<img src="assets/images/devtool_widget_tree_example.png" width="300"/>](assets/images/devtool_widget_tree_example.png)
 
 \
 &nbsp;
 
-Trong VsCode
+- Trong VsCode
 
 [<img src="assets/images/vscode_widget_tree_example.png" width="300"/>](assets/images/vscode_widget_tree_example.png)
 
@@ -128,7 +127,7 @@ Text(
 ...
 ```
 
-điều đó đồng nghĩa với việc 1 StatefulWidget A chứa 10 widget con, thì khi gọi hàm `setState()`, 10 widget con nằm trong A cũng sẽ bị `render` (vẽ lại). Điều này sẽ gây ảnh hưởng không nhỏ tới `performance` (hiệu năng) ứng dụng.
+điều đó đồng nghĩa với việc 1 StatefulWidget A chứa 10 widget con, thì khi gọi hàm `setState()`, 10 widget con nằm trong A cũng có thể bị `render` (vẽ lại). Điều này sẽ gây ảnh hưởng không nhỏ tới `performance` (hiệu năng) ứng dụng. Để tránh điều này, ta có thể sử dụng từ khoá `const` cho những widget với dữ liệu cố định.
 
 [<img src="assets/images/widget_warning_setState.png" width="300"/>](assets/images/widget_warning_setState.png)
 
@@ -242,7 +241,7 @@ Mình tin qua các ví dụ trên, chúng ta đã có hiểu được widget là
 
 `Flutter Catalog` cung cấp code demo kèm hình ảnh. Mình nghĩ đây là cách học Flutter nhanh nhất. Ngoài ra, `Flutter Catalog` còn tổng hợp các phần nâng cao và có tính năng `bookmark` để lưu lại những phần đang xem dở, 1 tính năng mình thấy khá hữu ích.
 
-Còn gìơ thì cùng đi sâu vào các widget cơ bản nhất của Flutter nhé.
+Còn giờ thì cùng đi sâu vào các widget cơ bản nhất của Flutter nhé.
 
 \
 &nbsp;
@@ -380,6 +379,11 @@ const Text.rich(
 ```
 
 [<img src="assets/images/text/text-rich.png" width="300"/>](assets/images/text/text-rich.png)
+
+Còn đây là 1 mẹo giúp mình code nhanh hơn, để con trỏ chuột ở vị trí widget, sử dụng tổ hợp phím `Command` + `.` trên Mac hoặc `Ctrl` + `.` trên Window
+
+[<img src="assets/images/quick_command.gif" width="300"/>](assets/images/quick_command.gif)
+
 
 \
 &nbsp;
