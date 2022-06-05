@@ -588,6 +588,6 @@ Xây dựng giao diện ứng dụng như ảnh:
 - Khi click vào Floating Button (+): tăng currentCounter lên 1 đơn vị.
 
 
-[<img src="assets/images/homework/result.mp4" width="200"/>](assets/images/homework/result.mp4)
+[<img src="assets/images/homework/result.gif" width="400"/>](assets/images/homework/result.gif)
 
-![aaaa](assets/images/homework/result.mp4)
+
