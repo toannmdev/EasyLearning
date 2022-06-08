@@ -2,14 +2,15 @@
 
 ## Nội dung chính:
 1. [Tổng quan về widget trong Flutter](#tổng-quan-về-widget-trong-flutter)
-2. [StatelessWidget vs StatefulWidget](#statelesswidget-vs-statefulwidget)
+2. Cách Flutter render 1 widget
+3. [StatelessWidget vs StatefulWidget](#statelesswidget-vs-statefulwidget)
 - [StatelessWidget](#statelesswidget)
 - [StatefulWidget](#statefulwidget)
 - [Life cycle](#life-cycle)
 
-3. [Các widget cơ bản](#các-widget-cơ-bản-trong-flutter)
+4. [Các widget cơ bản](#các-widget-cơ-bản-trong-flutter)
+  - [MaterialApp vs CupertinoApp](#materialapp-vs-cupertinoapp)
   - [Scafford](#scaffold)
-  - [Appbar](#appbar)
   - [Text](#text)
   - [Icon](#icon)
   - [Image](#image)
@@ -60,6 +61,27 @@ Trong Flutter, widget được chia làm 2 loại `StatelessWidget` và `Statefu
 \
 &nbsp;
 
+## Cách Flutter render 1 widget
+Flutter là 1 cross platform, vậy làm cách nào mà Flutter có thể render các widget lên mà vẫn giữ được performance trên tất cả các nền tảng?
+
+Flutter xây dựng riêng cho mình 1 bộ engine mang tên Flutter Engine để triển khai Flutter core library bao gồm animation và graphics, network I/O, plugin, Dart runtime, compile....
+
+\
+&nbsp;
+
+*Hình ảnh minh hoạ quá trình từ khi user tương tác cho tới khi widget được hiển thị*:
+
+[<img src="assets/images/render-pipeline.png" width="800"/>](assets/images/render-pipeline.png)
+
+\
+&nbsp;
+
+*Layout and rendering 1 widget từ (3) -> (6)*:
+
+[<img src="assets/images/trees.png" width="800"/>](assets/images/trees.png)
+
+\
+&nbsp;
 
 ## StatelessWidget vs StatefulWidget
 
@@ -237,7 +259,7 @@ Mình tin qua các ví dụ trên, chúng ta đã có hiểu được widget là
 
 đây là 1 hình ảnh về Container, được lấy từ ứng dụng trên. 
 
-`Flutter Catalog` cung cấp code demo kèm hình ảnh. Mình nghĩ đây là cách học Flutter nhanh nhất. Ngoài ra, `Flutter Catalog` còn tổng hợp các phần nâng cao và có tính năng `bookmark` để lưu lại những phần đang xem dở, 1 tính năng mình thấy khá hữu ích.
+`Flutter Catalog` tổng hợp lại các khái niệm cơ bản trong Flutter, cung cấp code demo kèm hình ảnh. Mình nghĩ đây là cách học Flutter nhanh nhất. Ngoài ra, `Flutter Catalog` còn tổng hợp các phần nâng cao và có tính năng `bookmark` để lưu lại những phần đang xem dở, 1 tính năng mình thấy khá hữu ích.
 
 Còn giờ thì cùng đi sâu vào các widget cơ bản nhất của Flutter nhé.
 
@@ -291,7 +313,7 @@ Khi sử dụng Scaffold, bắt buộc phải nằm trong MaterialApp hoặc Cup
 \
 &nbsp;
 
-### Appbar:
+#### Appbar:
 Là 1 thuộc tính của `Scaffold`, sẽ hiển thị trên cùng với `fixed height`
 
 Tổng quát về AppBar
@@ -330,7 +352,7 @@ class TestScaffold extends StatelessWidget {
 }
 ```
 
-khi build sẽ hiển thị lên giao diện như này:
+khi build sẽ hiển thị lên giao diện như sau:
 
 [<img src="assets/images/scaffold/with_appbar.png" width="300"/>](assets/images/with_appbar.png)
 
@@ -585,7 +607,7 @@ Xây dựng giao diện ứng dụng như ảnh:
 [<img src="assets/images/homework/result.png" width="200"/>](assets/images/homework/result.png)
 
 - Khi click vào Like: nếu chưa thích, chuyển về trạng thái Đã thích. Nếu Đã thích, chuyển về trạng thái Chưa thích.
-- Khi click vào Floating Button (+): tăng currentCounter lên 1 đơn vị.
+- Khi click vào Floating Button (+): tăng `currentCounter` lên 1 đơn vị, hiển thị được giá trị của `currentCounter`
 
 
 [<img src="assets/images/homework/result.gif" width="400"/>](assets/images/homework/result.gif)
